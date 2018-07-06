@@ -28,6 +28,7 @@ pip install Flask
 ```
 Python 3 is supported.
 
+Create 2 folders: 'uploads' and 'bin'.
 In the bin folder, put the [Pepsi-SAXS](https://team.inria.fr/nano-d/software/pepsi-saxs/) and [Pepsi-SANS](https://team.inria.fr/nano-d/software/pepsi-sans/) softwares which you have to download first.
 
 ## Running 
