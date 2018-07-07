@@ -1339,7 +1339,7 @@ def update_file_update(filename,contents,id_folder):
 @app.callback(
     Output('scattering_display', 'children'),
     [Input('Scattering_selection','value')])
-def upload_data_fnct(choice):
+def display_x_or_n(choice):
     if choice=='neutron_scattering':
         return neutron_display
     elif choice=='XRay_scattering' :
@@ -1348,7 +1348,7 @@ def upload_data_fnct(choice):
 @app.callback(
     Output('upload_display', 'children'),
     [Input('Choice','value')])
-def upload_data_fnct(choice):
+def display_f_or_p(choice):
     if choice=='fit':
         return fit_display
     elif choice=='prediction' :
@@ -1357,7 +1357,7 @@ def upload_data_fnct(choice):
 @app.callback(
     Output('upload_display_X', 'children'),
     [Input('Choice_X','value')])
-def upload_data_fnct(choice):
+def display_f_or_p_X(choice):
     if choice=='fit':
         return fit_display_X
     elif choice=='prediction' :
@@ -1457,7 +1457,7 @@ def calculation_fit_adv_optII_func(n_clicks):
     Output('calculation_fit', 'children'),
     [Input('adv_opt_IIb','n_clicks')]
 )
-def calculation_fit_adv_optII_func(n_clicks):
+def calculation_fit_func(n_clicks):
     if n_clicks %2 !=0:
         return Result_fit_adv_opt_IIb()
     else:
@@ -1468,7 +1468,7 @@ def calculation_fit_adv_optII_func(n_clicks):
 @app.callback(
     Output('final_display_X', 'children'),
     [Input('calculation_button_X','n_clicks'),Input('Choice_X','value'),Input('adv_opt_III','n_clicks')])
-def which_pepsi_sans_calculation(click_calculation,choice,click_adv_optIII):
+def which_pepsi_saxs_calculation(click_calculation,choice,click_adv_optIII):
     if click_calculation >0 : 
         if click_adv_optIII %2 !=0:
             if choice=='prediction':
